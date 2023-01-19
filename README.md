@@ -47,6 +47,12 @@ Neste desafio você vai praticar os seus conhecimentos em:
 
 - **[Node v13.8.0](https://nodejs.org/en/)** - ou superior, instalado em seu computador.
 
+## Tecnologías utilizadas:
+
+- JavaScript
+- HTML5
+- CSS3
+
 ## Resultado esperado
 ``` JSON
 
