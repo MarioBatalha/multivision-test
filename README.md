@@ -40,6 +40,8 @@ estrutura:
 Neste desafio você vai praticar os seus conhecimentos em:
 
 - **Algoritmo**
+- **Consistência**
+- **Estilo de programação**
 - **Error handling**
 - **Testes unitários**
 
