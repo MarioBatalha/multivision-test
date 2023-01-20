@@ -5,25 +5,32 @@ export const letter = {
     return (async function getUserInfoAndPostInfo() {
       try {
         const users = await fetch("https://jsonplaceholder.typicode.com/users")
-          .then((res) => res.json())
+          .then((res) => {
+            if (res.ok) {
+              return res.json();
+            } else {
+              throw new Error("Network response error");
+            }
+          })
           .then((data) => data);
-    
+
         const posts = await fetch("https://jsonplaceholder.typicode.com/posts")
           .then((res) => res.json())
           .then((data) => data);
-    
-          const usersWithPosts = users.map((user) => ({
+
+        const usersWithPosts = users.map((user) => ({
           ...user,
           posts: posts.filter(({ userId }) => userId === user.id),
         }));
-    
-        return usersWithPosts
+
+        return usersWithPosts;
       } catch (error) {
         console.log(error, "Erro ao carregar dados ");
       }
     })();
   },
 };
+
 
 //For testing purposes
 //If remove the instruction the test will fail
