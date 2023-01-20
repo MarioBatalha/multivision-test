@@ -15,7 +15,13 @@ export const letter = {
           .then((data) => data);
 
         const posts = await fetch("https://jsonplaceholder.typicode.com/posts")
-          .then((res) => res.json())
+          .then((res) => {
+            if (res.ok) {
+              return res.json();
+            } else {
+              throw new Error("Network response error");
+            }
+          })
           .then((data) => data);
 
         const usersWithPosts = users.map((user) => ({
@@ -31,10 +37,9 @@ export const letter = {
   },
 };
 
-
 //For testing purposes
 //If remove the instruction the test will fail
-export const letterInfo = async () => await letter.handleUsersWithPosts;
+//export const letterInfo = async () => await letter.handleUsersWithPosts;
 
 //To display data on console
-//console.log(await letter.handleUsersWithPosts)
+console.log(await letter.handleUsersWithPosts);
