@@ -25,4 +25,6 @@ export const letter = {
   },
 };
 
-console.log(await letter.handleUsersWithPosts)
+export const letterInfo = async () => await letter.handleUsersWithPosts;
+
+//console.log(letter.handleUsersWithPosts)
