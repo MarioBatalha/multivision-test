@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "## Objetivo:",
   "main": "index.js",
+  "type":"module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/MarioBatalha/multivision-test/issues"
   },
-  "homepage": "https://github.com/MarioBatalha/multivision-test#readme"
+  "homepage": "https://github.com/MarioBatalha/multivision-test#readme",
+  "dependencies": {
+    "node-fetch": "^3.3.0"
+  }
 }
