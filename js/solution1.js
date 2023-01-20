@@ -25,6 +25,9 @@ export const letter = {
   },
 };
 
+//For testing purposes
+//If remove the instruction the test will fail
 export const letterInfo = async () => await letter.handleUsersWithPosts;
 
-//console.log(letter.handleUsersWithPosts)
+//To display data on console
+//console.log(await letter.handleUsersWithPosts)

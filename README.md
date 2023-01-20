@@ -55,6 +55,17 @@ Neste desafio você vai praticar os seus conhecimentos em:
 - HTML5
 - CSS3
 
+## Soluções:
+### Usando Métodos de manipulação de Array
+   - Fiz a resquest para cada endpoint e guardei o respectivo resultado em uma variável (users, posts).
+   - Usei o map para iterar os cada user, usei spread operator para retornar todos os usuários dentro do map e posteriomente filtrei com o objecto posts que retorna todos os userId === user.id. 
+
+   ***Nota:*** Apesar de funcional essa solução é adequada para pouco volune de dados, porque oferece limitações para grande volume de dados reduzindo a perfomance da aplicação.
+
+   ### Usando Indexação do elastic search
+   - Apropriado para grande volume de dados oferecendo maior escalabilidade e melhorando a performance da aplicação.
+   - users -> posts.all().
+
 ## Resultado esperado
 ``` JSON
 
