@@ -9,7 +9,7 @@ export const letter = {
             if (res.ok) {
               return res.json();
             } else {
-              throw new Error("Network response error");
+              throw new Error("Network response error loading users data");
             }
           })
           .then((data) => data);
@@ -19,7 +19,7 @@ export const letter = {
             if (res.ok) {
               return res.json();
             } else {
-              throw new Error("Network response error");
+              throw new Error("Network response error loading posts data");
             }
           })
           .then((data) => data);
@@ -31,7 +31,7 @@ export const letter = {
 
         return usersWithPosts;
       } catch (error) {
-        console.log(error, "Erro ao carregar dados ");
+        console.log(error, "Error loading data");
       }
     })();
   },
